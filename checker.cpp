@@ -42,7 +42,7 @@ void case1(string s, map<string, string> m)
     int valid=true;
     if ((m.find(op) == m.end()))
     {
-        cout << "Invalid Instruction :Opcode not found" << endl;
+        cout << "Invalid Instruction :Either such opcode dont exist or format not supported for that opcode" << endl;
         valid = false;
     }
 
@@ -58,7 +58,7 @@ void case2(string s, map<string, string> m)
     int valid=true;
     if ((m.find(op) == m.end()))
     {
-        cout << "Invalid Instruction :Opcode not found" << endl;
+        cout << "Invalid Instruction :Either such opcode dont exist or format not supperted for that opcode" << endl;
         valid = false;
     }
 
@@ -66,7 +66,7 @@ void case2(string s, map<string, string> m)
     int r2 = s[3] - 48;
     cout << r1 << " " << r2 << endl;
     if (!(checkValidReg(r1) && checkValidReg(r2))){
-        cout << "Invalid Instruction :Registers with such number not found" << endl;
+        cout << "Invalid Instruction :Either such opcode dont exist or format not supported for that opcode" << endl;
         valid=false;
     }
 
@@ -82,8 +82,9 @@ void case3(string s, map<string, string> m)
     int valid = true;
     if ((m.find(op) == m.end()))
     {
-        cout << "Invalid Instruction :Opcode not found" << endl;
+        cout << "Invalid Instruction :Either such opcode dont exist or format not supported for that opcode" << endl;
         valid = false;
+        return;
     }
     a = a.substr(6);
     
@@ -127,7 +128,7 @@ void case4(string s,map<string,string> m)
     int valid = true;
     string op = a.substr(0, 6);
     if ((m.find(op) == m.end())){
-        cout << "Invalid Instruction :Opcode not found" << endl;
+        cout << "Invalid Instruction :Either such opcode dont exist or format not supported for that opcode" << endl;
         valid = false;
     }
     a = a.substr(6);
